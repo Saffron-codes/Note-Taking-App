@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:sqfun/routes/add_employee_page.dart';
+import 'package:sqfun/routes/add_note_page.dart';
 import 'package:sqfun/routes/home_page.dart';
 
 class App extends StatefulWidget {
@@ -19,7 +19,7 @@ class _AppState extends State<App> {
       initialRoute: "/",
       routes:{
         "/":(context) => homePage(database: widget.database,),
-        "/add":(context)=>AddUserPage(),
+        "/add":(context)=>AddNotePage(),
       }
     );
   }

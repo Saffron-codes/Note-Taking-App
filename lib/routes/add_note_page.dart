@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class AddUserPage extends StatefulWidget {
-  const AddUserPage({ Key? key }) : super(key: key);
+class AddNotePage extends StatefulWidget {
+  const AddNotePage({ Key? key }) : super(key: key);
 
   @override
-  _AddUserPageState createState() => _AddUserPageState();
+  _AddNotePageState createState() => _AddNotePageState();
 }
 
-class _AddUserPageState extends State<AddUserPage> {
+class _AddNotePageState extends State<AddNotePage> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(

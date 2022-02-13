@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqfun/database_helper.dart';
-import 'package:sqfun/employee.dart';
+import 'package:sqfun/note.dart';
 
 class homePage extends StatefulWidget {
   final Database database;

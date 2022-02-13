@@ -1,5 +1,5 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:sqfun/employee.dart';
+import 'package:sqfun/note.dart';
 
 class DatabaseHelper{
   final Database database;
