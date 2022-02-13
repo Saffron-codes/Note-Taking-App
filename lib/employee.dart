@@ -1,24 +1,24 @@
-class Employee {
+class Note {
   final int id;
-  final String name;
-  final int age;
-  final String field;
+  final String title;
+  final String content;
+  final DateTime dateTime;
 
-  Employee(
+  Note(
       {required this.id,
-      required this.name,
-      required this.age,
-      required this.field});
+      required this.title,
+      required this.content,
+      required this.dateTime});
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'name': name,
-      'age': age,
-      'field':field
+      'title': title,
+      'content': content,
+      'dateTime':dateTime
     };
   }
   @override
   String toString() {
-    return 'Employee{id: $id, name: $name, age: $age}';
+    return 'Employee{id: $id, title: $title,content:$content, dateTime: $dateTime}';
   }
 }

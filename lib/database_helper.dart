@@ -6,14 +6,14 @@ class DatabaseHelper{
   DatabaseHelper(this.database);
 
   //get all employees
-  Future<List<Employee>> getEmployees()async{
-    final List<Map<String,dynamic>> maps = await database.query("Employees");
+  Future<List<Note>> getEmployees()async{
+    final List<Map<String,dynamic>> maps = await database.query("Notes");
     return List.generate(maps.length, (i) {
-    return Employee(
+    return Note(
       id: maps[i]['id'],
-      name: maps[i]['name'],
-      age: maps[i]['age'],
-      field:maps[i]['field']
+      title: maps[i]['title'],
+      content: maps[i]['content'],
+      dateTime:maps[i]['dateTime']
     );
     });
   }

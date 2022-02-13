@@ -25,14 +25,14 @@ class _homePageState extends State<homePage> {
           child: Icon(CupertinoIcons.add),
           onPressed: ()async{
             Navigator.pushNamed(context, "/add");
-            Employee myemployee = Employee(id: 4, name: "Ben Harris", age: 13, field: "Gamer");
+            Note myemployee = Note(id: 1, title: "Groceries", content: "Chicken", dateTime: DateTime.now());
             await db.insert('Employees', myemployee.toMap(),conflictAlgorithm: ConflictAlgorithm.replace);
           },
         ),
       ),
-      child: FutureBuilder(
+      child: FutureBuilder<List<Note>>(
         future: databaseHelper.getEmployees(),
-        builder: (context,AsyncSnapshot<List<Employee>> snapshot){
+        builder: (context,AsyncSnapshot<List<Note>> snapshot){
           if(snapshot.connectionState == ConnectionState.done){
             return ListView.builder(
               itemCount:snapshot.data!.length,
@@ -49,12 +49,12 @@ class _homePageState extends State<homePage> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(snapshot.data![index].name),
-                            Text(snapshot.data![index].age.toString()),
+                            Text(snapshot.data![index].title),
+                            Text(snapshot.data![index].content),
                           ],
                         ),
                         Spacer(),
-                        Text(snapshot.data![index].field),
+                        Text(snapshot.data![index].dateTime.toLocal().toString()),
                       ],
                     ),
                   ),

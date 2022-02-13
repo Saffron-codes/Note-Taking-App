@@ -5,10 +5,10 @@ import 'package:sqfun/App.dart';
 void main()async{
   WidgetsFlutterBinding.ensureInitialized();
   final database = await openDatabase(
-    (await getDatabasesPath()+"employee_data.db"),
+    (await getDatabasesPath()+"Notes.db"),
     onCreate: (db, version) {
       return db.execute(
-        'CREATE TABLE IF NOT EXISTS Employees(id INTEGER PRIMARY KEY,name TEXT,age INTEGER,field TEXT)'
+        'CREATE TABLE IF NOT EXISTS Notes(id INTEGER PRIMARY KEY,name TEXT,age INTEGER,field TEXT)'
         );
     },
     version: 1
