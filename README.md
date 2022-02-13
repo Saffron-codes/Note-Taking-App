@@ -1,5 +1,7 @@
 # Note Taking App
 
-A new Flutter project.
+# Built with Flutter and Sqflit
 
-# Built with Flutter and Sqflite
+## Features
+    Add Note
+    
