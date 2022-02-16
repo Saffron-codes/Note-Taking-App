@@ -2,7 +2,7 @@ class Note {
   final int id;
   final String title;
   final String content;
-  final DateTime dateTime;
+  final String dateTime;
 
   Note(
       {required this.id,
